@@ -2,7 +2,8 @@ import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const ShaderComponent = ({ color, size, rotationSpeed }) => {
+
+const ShaderComponent = ({ color, size, rotationSpeed, position }) => {
   const meshRef = useRef();
 
   // Fragment shader code
@@ -30,7 +31,8 @@ const ShaderComponent = ({ color, size, rotationSpeed }) => {
   });
 
   return (
-    <mesh ref={meshRef} scale={size}>
+    // <mesh ref={meshRef} scale={size} position={position}> 
+    <mesh ref={meshRef} scale={size} position={position}>
       <boxGeometry args={[1, 1, 1]} /> {/* Updated line */}
       <shaderMaterial
         attach="material"
