@@ -1,7 +1,8 @@
 .App {
   text-align: center;
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure minimum height is full viewport height */
+  min-width: 100vw; /* Ensure minimum width is full viewport width */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,35 +11,10 @@
   color: white;
 }
 
-.div {
-  height: 40vmin;
-  pointer-events: none;
+.App canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  aspect-ratio: auto; /* Set aspect-ratio to auto to let it be determined by width and height */
 }
 
-.div {
-  animation: div-animation infinite 20s alternate-reverse;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes div-animation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
