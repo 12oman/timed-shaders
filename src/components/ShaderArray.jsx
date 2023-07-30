@@ -5,9 +5,13 @@ import ShaderComponent from './ShaderComponent';
 const ShaderArray = ({ colors, amount, rows }) => {
   const { camera } = useThree();
 
+  // fine-tune horizontal and vertical multis
+  const horizontalMultiplier = 0.9
+  const verticalMultiplier = 0.7
+
   // Calculate horizontal and vertical spacing based on the camera's properties
-  const horizontalSpacing = camera.aspect * camera.position.z * Math.tan((camera.fov * Math.PI) / 360) / 5;
-  const verticalSpacing = horizontalSpacing / camera.aspect / 5;
+  const horizontalSpacing = camera.aspect * camera.position.z * Math.tan((camera.fov * Math.PI) / 360) * horizontalMultiplier;
+  const verticalSpacing = horizontalSpacing / camera.aspect * verticalMultiplier;
 
   return (
     <>
