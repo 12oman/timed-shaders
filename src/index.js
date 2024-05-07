@@ -2,13 +2,18 @@ import React from "react";
 import { createRoot } from "react-dom/client"; // Import createRoot
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+// import reportWebVitals from "./reportWebVitals";
 
 const rootElement = document.getElementById("root");
+// make an array of different timing intervals to match a drum and bass beat
+// const beat = [800, 400, 400, 200, 800, 400, 400, 400];
+
+// se a random key
+// const randomKey = Math.random().toString();
+
 
 if (rootElement) {
-  const root = createRoot(rootElement); // Create the root using createRoot
-  // Render the App inside the root
+  const root = createRoot(rootElement); 
   const renderApp = () => {
     root.render(
       <React.StrictMode>
@@ -16,12 +21,9 @@ if (rootElement) {
       </React.StrictMode>
     );
   };
-  
-  // Setup a timer to update the shapes every second
-  setInterval(renderApp, 2000);
-}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  renderApp();
+  
+  // Setup a timer to update the shapes randomly from the beat array
+  // setInterval(renderApp, (beat[Math.floor(Math.random() * beat.length)] * 1));
+}
