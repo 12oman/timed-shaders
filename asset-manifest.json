@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/timed-shaders/static/css/main.da32296c.css",
+    "main.js": "/timed-shaders/static/js/main.f04c0320.js",
+    "index.html": "/timed-shaders/index.html",
+    "main.da32296c.css.map": "/timed-shaders/static/css/main.da32296c.css.map",
+    "main.f04c0320.js.map": "/timed-shaders/static/js/main.f04c0320.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da32296c.css",
+    "static/js/main.f04c0320.js"
+  ]
+}
