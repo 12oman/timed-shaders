@@ -12,7 +12,7 @@ const App = () => {
   const horizontalSpacing = (window.innerWidth / amount) - 10; // +1 to add some padding
   const verticalSpacing = (window.innerHeight / amount) - 10; // Adjust as needed
   const [randomKey, setRandomKey] = React.useState(Math.random().toString());
-  const beat = [800, 400, 400, 200, 800, 400, 400, 400];
+  const beat = [3000, 4000, 3000, 2000, 5000, 4000, 3000, 5000];
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,7 +34,7 @@ const App = () => {
     const interval = setInterval(() => {
       // Update the random key at each beat interval
       setRandomKey(Math.random().toString());
-    }, beat[Math.floor(Math.random() * beat.length)] * 5);
+    }, beat[Math.floor(Math.random() * beat.length)]);
 
     return () => clearInterval(interval); // Clean up the interval
   }, []);
@@ -46,7 +46,7 @@ const App = () => {
       <div ref={ref} className="container">
         <Canvas ref={canvasRef}  > 
 
-        <CustomCam position={[2, 3, 50]} fov={75} />
+        <CustomCam position={[2, 3, 50]} fov={50} />
         
 
           <ShaderArray
@@ -61,12 +61,10 @@ const App = () => {
         <div className="text-container">
           <div className="text">
             <span>
-            "But afterwards there occurred violent earthquakes and floods; and in a single day and night of rain all your warlike men in a body sank into the earth,
-            and the island of Atlantis in like manner disappeared, and was sunk beneath the sea."
+            "Ruaumoko, Whakarara, Marcel Duchamp, Yoko Ono, Bruce Nauman, John Baldessari, Billy Apple, Students, Jacob, John, Eva, Shivam, Mokopōpaki, Pocket painting recipients, GPUs, Early mining rigs, Blockchain networks, Logistic algorithms, AI, 0% Practitioners, Undiscovered Artists, "Speed Hackers", Tikanga, Indigenous ahei position, Problem space, Psychic insulation, Hātepe, Whakapapa, Mauri, Kaiwaewae."
             </span>
             <span>
-            "But afterwards there occurred violent earthquakes and floods; and in a single day and night of rain all your warlike men in a body sank into the earth,
-            and the island of Atlantis in like manner disappeared, and was sunk beneath the sea."
+            "Ruaumoko, Whakarara, Marcel Duchamp, Yoko Ono, Bruce Nauman, John Baldessari, Billy Apple, Students, Jacob, John, Eva, Shivam, Mokopōpaki, Pocket painting recipients, GPUs, Early mining rigs, Blockchain networks, Logistic algorithms, AI, 0% Practitioners, Undiscovered Artists, "Speed Hackers", Tikanga, Indigenous ahei position, Problem space, Psychic insulation, Hātepe, Whakapapa, Mauri, Kaiwaewae."
             </span>
           </div>
         </div>
